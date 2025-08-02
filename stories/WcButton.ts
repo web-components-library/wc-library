@@ -11,16 +11,17 @@ export class WcButton extends LitElement {
       align-items: center;
       gap: 8px;
       padding: 8px 16px;
-      border: 1px solid #ccc;
+      border: 1px solid var(--button-border-color, #ccc);
       border-radius: 4px;
-      background: #fff;
+      background: var(--button-bg-color, #fff);
+      color: var(--button-text-color, #000);
       cursor: pointer;
       font-family: inherit;
       font-size: 14px;
     }
     
     button:hover {
-      background: #f5f5f5;
+      background: var(--button-hover-bg-color, #f5f5f5);
     }
     
     .icon {
