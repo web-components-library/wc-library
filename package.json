@@ -1,16 +1,24 @@
 {
-  "name": "wc-library",
+  "name": "@mohitbalwani/wc-library",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Web Components (WC) library",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["web-components", "lit", "button"],
+  "author": "Mohit Balwani",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohitbalwani/wc-library"
+  },
   "dependencies": {
     "lit": "^3.3.1"
   },
