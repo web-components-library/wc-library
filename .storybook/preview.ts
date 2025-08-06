@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/web-components";
-import './themes/light.css';
-import './themes/dark.css';
+import '../themes/light.css';
+import '../themes/dark.css';
 
 const preview: Preview = {
   parameters: {
