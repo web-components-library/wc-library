@@ -14,8 +14,8 @@ export class WcButton extends LitElement {
 
   render() {
     return html`
-      <button>
-        ${this.icon ? html`<span class="icon">${this.icon}</span>` : ''}
+      <button part="button">
+        ${this.icon ? html`<span part="icon">${this.icon}</span>` : ''}
         ${this.label}
       </button>
     `;
@@ -27,6 +27,14 @@ export class WcButton extends LitElement {
       // Handle any updates needed when label or icon changes
       console.log(`Button updated: label="${this.label}", icon="${this.icon}"`);
     }
+  }
+
+  get buttonEl(): Element | null {
+    return this.renderRoot.querySelector('[part=button]');
+  }
+
+  get iconEl(): Element | null {
+    return this.renderRoot.querySelector('[part=icon]');
   }
 }
 

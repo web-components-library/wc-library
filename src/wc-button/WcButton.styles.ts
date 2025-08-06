@@ -5,7 +5,7 @@ export const wcButtonStyles = css`
     display: inline-block;
   }
   
-  button {
+  [part=button] {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -19,11 +19,11 @@ export const wcButtonStyles = css`
     font-size: 14px;
   }
   
-  button:hover {
+  [part=button]:hover {
     background: var(--button-hover-bg-color);
   }
   
-  .icon {
+  [part=icon] {
     width: 16px;
     height: 16px;
   }

@@ -9,7 +9,11 @@ interface WcButtonArgs {
 
 const meta: Meta<WcButtonArgs> = {
   title: 'Components/WcButton',
-  tags: ['autodocs'],
+  parameters: {
+    docs: {
+      page: () => import('./WcButton.mdx')
+    }
+  },
   argTypes: {
     label: { control: 'text' },
     icon: { control: 'text' },

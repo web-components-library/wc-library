@@ -1,0 +1,72 @@
+import { Canvas, Meta, ArgTypes, Story } from '@storybook/blocks';
+import * as WcButtonStories from './WcButton.stories';
+
+<Meta of={WcButtonStories} />
+
+# WcButton
+
+A customizable button web component built with Lit. Supports icons, accessibility features, and theming.
+
+## Features
+
+- ✅ **Accessible by default** with ARIA support
+- 🎨 **Icon support** with proper screen reader handling  
+- 🚫 **Disabled state** for non-interactive buttons
+- 🎭 **Themeable** with CSS custom properties
+- 🌙 **Light and dark theme** support
+- 🔧 **TypeScript** support with proper types
+
+## Basic Usage
+
+```html
+<wc-button label="Click me"></wc-button>
+<wc-button label="Save" icon="💾"></wc-button>
+<wc-button label="Delete" disabled></wc-button>
+```
+
+## Examples
+
+### Default Button
+<Canvas of={WcButtonStories.Default} />
+
+### With Icon
+<Canvas of={WcButtonStories.WithIcon} />
+
+### Icon Only
+<Canvas of={WcButtonStories.IconOnly} />
+
+## Properties
+
+<ArgTypes of={WcButtonStories} />
+
+## Accessibility
+
+The component follows accessibility best practices:
+
+- Uses semantic `<button>` element
+- Supports `aria-label` for custom accessible names
+- Icons are marked `aria-hidden="true"` to avoid screen reader duplication
+- Proper disabled state handling
+- Keyboard navigation support
+
+## Theming
+
+The button uses CSS custom properties for theming:
+
+```css
+:root {
+  --button-bg-color: #ffffff;
+  --button-text-color: #000000;
+  --button-border-color: #cccccc;
+  --button-hover-bg-color: #f5f5f5;
+}
+```
+
+## Events
+
+The button inherits all standard button events:
+- `click`
+- `focus`
+- `blur`
+- `mouseenter`
+- `mouseleave`
