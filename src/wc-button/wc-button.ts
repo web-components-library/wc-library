@@ -1,7 +1,7 @@
 import { LitElement, html, PropertyValues } from 'lit';
 import { property } from 'lit/decorators.js';
-import { wcButtonStyles } from './WcButton.styles';
-import '../wc-icon/WcIcon';
+import { wcButtonStyles } from './wc-button.styles';
+import '../wc-icon/wc-icon';
 
 export class WcButton extends LitElement {
   static styles = wcButtonStyles;

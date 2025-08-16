@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import '../src/wc-icon/WcIcon';
+import '../src/wc-icon/wc-icon';
 import { icons } from '../src/wc-icon/icons';
 
 interface WcIconArgs {

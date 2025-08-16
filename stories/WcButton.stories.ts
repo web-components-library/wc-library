@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/web-components';
 import { html } from 'lit';
-import '../src/wc-button/WcButton';
+import '../src/wc-button/wc-button';
 
 interface WcButtonArgs {
   label: string;

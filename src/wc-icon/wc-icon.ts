@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit';
 import { property } from 'lit/decorators.js';
-import { wcIconStyles } from './WcIcon.styles';
+import { wcIconStyles } from './wc-icon.styles';
 import { icons, type IconName } from './icons';
 
 export class WcIcon extends LitElement {
