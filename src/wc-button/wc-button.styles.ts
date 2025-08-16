@@ -86,10 +86,4 @@ export const wcButtonStyles = css`
   :host([full-width]) [part=button] {
     width: 100%;
   }
-
-  /* Link styling */
-  a[part=button] {
-    text-decoration: none;
-    display: inline-flex;
-  }
 `;

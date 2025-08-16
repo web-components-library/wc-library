@@ -5,6 +5,7 @@ import '../src/wc-button/wc-button';
 interface WcButtonArgs {
   label: string;
   icon: string;
+  tooltip: string;
   disabled: boolean;
   variant: 'primary' | 'secondary' | 'danger' | 'default';
   size: 'small' | 'medium' | 'large';
@@ -22,6 +23,7 @@ const meta: Meta<WcButtonArgs> = {
   argTypes: {
     label: { control: 'text' },
     icon: { control: 'text' },
+    tooltip: { control: 'text' },
     disabled: { control: 'boolean' },
     variant: { control: 'select', options: ['primary', 'secondary', 'danger', 'default'] },
     size: { control: 'select', options: ['small', 'medium', 'large'] },
@@ -31,6 +33,7 @@ const meta: Meta<WcButtonArgs> = {
   render: (args) => html`<wc-button 
     .label=${args.label} 
     .icon=${args.icon}
+    .tooltip=${args.tooltip}
     ?disabled=${args.disabled}
     .variant=${args.variant}
     .size=${args.size}
@@ -46,6 +49,7 @@ export const Default: Story = {
   args: {
     label: 'Button',
     icon: 'success',
+    tooltip: 'You can edit this tooltip',
     disabled: false,
     variant: 'default',
     size: 'medium',

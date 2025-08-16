@@ -1,6 +1,9 @@
 // Export all components
 export * from './src/wc-button/wc-button';
 export * from './src/wc-icon/wc-icon';
+
+// Export utilities
+export * from './src/shared/tooltip-mixin';
 // export * from './src/wc-input/WcInput';
 // export * from './src/wc-card/WcCard';
 

@@ -7,6 +7,7 @@ interface WcIconArgs {
   name: string;
   size: 'small' | 'medium' | 'large';
   spin: boolean;
+  tooltip: string;
 }
 
 const meta: Meta<WcIconArgs> = {
@@ -15,11 +16,13 @@ const meta: Meta<WcIconArgs> = {
     name: { control: 'text' },
     size: { control: 'select', options: ['small', 'medium', 'large'] },
     spin: { control: 'boolean' },
+    tooltip: { control: 'text' },
   },
   render: (args) => html`<wc-icon 
     .name=${args.name} 
     .size=${args.size}
     .spin=${args.spin}
+    .tooltip=${args.tooltip}
   ></wc-icon>`,
 };
 
@@ -31,6 +34,7 @@ export const Default: Story = {
     name: 'star',
     size: 'large',
     spin: false,
+    tooltip: 'You can edit this tooltip'
   }
 };
 
