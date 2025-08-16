@@ -1,16 +1,12 @@
 import { LitElement, html, PropertyValues } from 'lit';
+import { property } from 'lit/decorators.js';
 import { wcButtonStyles } from './WcButton.styles';
 
 export class WcButton extends LitElement {
   static styles = wcButtonStyles;
 
-  static properties = {
-    label: { type: String },
-    icon: { type: String }
-  };
-
-  label = '';
-  icon = '';
+  @property() label = '';
+  @property() icon = '';
 
   render() {
     return html`
