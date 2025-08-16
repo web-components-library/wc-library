@@ -7,8 +7,8 @@ export class WcIcon extends LitElement {
   static styles = wcIconStyles;
 
   @property() name: IconName | '' = '';
-  @property({ reflect: true }) size: 'small' | 'medium' | 'large' = 'medium';
-  @property({ type: Boolean, reflect: true }) spin = false;
+  @property({ reflect: true }) size: String = 'medium';
+  @property({ type: Boolean, reflect: true }) spin: Boolean = false;
 
   render() {
     

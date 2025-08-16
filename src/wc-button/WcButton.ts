@@ -1,18 +1,33 @@
 import { LitElement, html, PropertyValues } from 'lit';
 import { property } from 'lit/decorators.js';
 import { wcButtonStyles } from './WcButton.styles';
+import '../wc-icon/WcIcon';
 
 export class WcButton extends LitElement {
   static styles = wcButtonStyles;
 
-  @property() label = '';
-  @property() icon = '';
+  @property() label: String = '';
+  @property() icon: String = '';
+  @property({ type: Boolean, reflect: true }) disabled: Boolean = false;
+  @property({ reflect: true }) variant: String = 'default';
+  @property({ reflect: true }) size: String = 'medium';
+  @property({ type: Boolean }) loading: Boolean = false;
+  @property({ type: Boolean, reflect: true, attribute: 'full-width' }) fullWidth: Boolean = false;
+
 
   render() {
+    const content = html`
+      ${this.loading ? html`<wc-icon name="spinner" spin></wc-icon>` : ''}
+      ${this.icon && !this.loading ? html`<wc-icon name="${this.icon}"></wc-icon>` : ''}
+      ${this.label}
+    `;
+
     return html`
-      <button part="button">
-        ${this.icon ? html`<span part="icon">${this.icon}</span>` : ''}
-        ${this.label}
+      <button 
+        part="button" 
+        ?disabled=${this.disabled || this.loading}
+      >
+        ${content}
       </button>
     `;
   }
