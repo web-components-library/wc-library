@@ -5,7 +5,7 @@ import { icons } from '../src/wc-icon/icons';
 
 interface WcIconArgs {
   name: string;
-  size: 'small' | 'medium' | 'large';
+  size: string;
   spin: boolean;
   tooltip: string;
 }
@@ -19,9 +19,9 @@ const meta: Meta<WcIconArgs> = {
     tooltip: { control: 'text' },
   },
   render: (args) => html`<wc-icon 
-    .name=${args.name} 
+    .name=${args.name}
     .size=${args.size}
-    .spin=${args.spin}
+    ?spin=${args.spin}
     .tooltip=${args.tooltip}
   ></wc-icon>`,
 };

@@ -1,6 +1,4 @@
 import type { Preview } from "@storybook/web-components";
-import '../themes/light.css';
-import '../themes/dark.css';
 
 const preview: Preview = {
   parameters: {
@@ -33,6 +31,11 @@ const preview: Preview = {
     (story, context) => {
       const theme = context.globals.theme || 'light';
       document.documentElement.setAttribute('data-theme', theme);
+      
+      // Update background colors for better theme visualization
+      document.body.style.backgroundColor = theme === 'dark' ? '#1a1a1a' : '#ffffff';
+      // document.body.style.color = theme === 'dark' ? '#ffffff' : '#000000';
+      
       return story();
     },
   ],

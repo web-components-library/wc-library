@@ -3,6 +3,37 @@ import { css } from 'lit';
 export const wcButtonStyles = css`
   :host {
     display: inline-block;
+    --button-bg: #f8f9fa;
+    --button-text: #495057;
+    --button-border: #dee2e6;
+    --button-hover-bg: #e9ecef;
+    --button-focus: #007bff;
+  }
+
+  :host-context([data-theme="light"]) {
+    --button-bg: #f8f9fa;
+    --button-text: #495057;
+    --button-border: #dee2e6;
+    --button-hover-bg: #e9ecef;
+    --button-focus: #007bff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :host {
+      --button-bg: #343a40;
+      --button-text: #f8f9fa;
+      --button-border: #495057;
+      --button-hover-bg: #495057;
+      --button-focus: #4dabf7;
+    }
+  }
+
+  :host-context([data-theme="dark"]) {
+    --button-bg: #343a40;
+    --button-text: #f8f9fa;
+    --button-border: #495057;
+    --button-hover-bg: #495057;
+    --button-focus: #4dabf7;
   }
   
   [part=button] {
@@ -11,10 +42,10 @@ export const wcButtonStyles = css`
     justify-content: center;
     gap: 8px;
     padding: 8px 16px;
-    border: 1px solid var(--button-border-color);
+    border: 1px solid var(--button-border);
     border-radius: 4px;
-    background: var(--button-bg-color);
-    color: var(--button-text-color);
+    background: var(--button-bg);
+    color: var(--button-text);
     cursor: pointer;
     font-family: inherit;
     font-size: 14px;
@@ -22,7 +53,7 @@ export const wcButtonStyles = css`
   }
   
   [part=button]:hover {
-    background: var(--button-hover-bg-color);
+    background: var(--button-hover-bg);
   }
   
 
@@ -70,7 +101,7 @@ export const wcButtonStyles = css`
 
   /* Focus state */
   [part=button]:focus {
-    outline: 2px solid var(--button-focus-color, #007bff);
+    outline: 2px solid var(--button-focus);
     outline-offset: 2px;
   }
 
